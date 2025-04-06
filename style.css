@@ -1,0 +1,405 @@
+/* === GLOBAL STYLES === */
+body {
+    font-family: "Poppins"; /* Sets the font style for the entire page */
+    margin: 0;              /* Removes default margin */
+    padding: 0;             /* Removes default padding */
+    text-align: center;     /* Centers text content */
+    position: relative;     /* Positions the body relative for layering */
+    height: 100%;           /* Makes body take full height of the viewport */
+    overflow: hidden;       /* Hides scrollbars and overflowing content */
+}
+
+/* === NAVIGATION BAR === */
+nav {
+    background: #FFFFFA;  /* Light background color */
+    padding: 10px 0;        /* Vertical padding */
+    position: relative;     /* Positioned relative for z-index control */
+    z-index: 10;            /* Stacks nav above other elements */
+    font-size: 25px;        /* Sets font size */
+    height: 40px;           /* Fixed height */
+    display: flex;          /* Uses flex layout */
+    align-items: center;    /* Vertically centers nav items */
+    justify-content: center;/* Horizontally centers nav items */
+}
+
+/* === NAVIGATION LINKS === */
+nav a {
+    margin: 0 15px;         /* Horizontal spacing between links */
+    text-decoration: none;  /* Removes underline */
+    color: #333;          /* Dark gray text color */
+    font-size: 25px;        /* Font size for links */
+    transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+nav a:hover {
+    color: #C08CE1; /* Light purple on hover */
+}
+
+nav a.active {
+    color: #C08CE1; /* Same light purple for active link */    
+}
+
+/* === FULL SCREEN CONTAINER === */
+.full-screen-container {
+    background-color: #211176; /* Dark purple background */
+    position: fixed;           /* Stays fixed to the screen */
+    width: 100%;               /* Full width */
+    height: 100vh;             /* Full viewport height */
+    display: flex;             /* Flexbox for centering content */
+    justify-content: center;   /* Horizontally centers content */
+    align-items: center;       /* Vertically centers content */
+    overflow: hidden;          /* Hides anything overflowing */
+    margin: 0;
+    padding: 0;
+}
+
+/* === BACKGROUND IMAGE INSIDE FULL SCREEN CONTAINER === */
+.full-screen-container .bg-img {     
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;        
+}
+
+/* === CENTERED OVERLAY IMAGE === */
+.full-screen-container .overlay-image {
+    width: 100%; 
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;     
+}
+
+/* === GENERIC CONTAINER === */
+.container {
+    background-color: #211176;  /* Matches background color */
+    position: relative;
+    width: 100%;
+    min-height: 100vh;  /* Ensures it takes at least full screen height */
+    display: flex;  /* Flex container */
+    flex-direction: column; /* Stacks children vertically */
+    justify-content: center;    /* Centers vertically */
+    align-items: center;    /* Centers horizontally */
+    padding: 0;
+    margin: 0;
+}
+
+/* === IMAGE STYLING INSIDE CONTAINER === */
+.container img {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;    /* Restricts image height */
+    border-radius: 25px;    /* Soft rounded corners */
+    /* Apply a soft edge mask */
+    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+    mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+    
+    -webkit-mask-repeat: no-repeat; /* Prevents mask from repeating */
+    mask-repeat: no-repeat;
+
+    -webkit-mask-size: 100% 100%;   /* Makes mask cover the whole image */
+    mask-size: 100% 100%;
+    }
+
+/* === CONTAINER FOR USER OPTION 1=== */
+.container1 {
+    background-color: #0e0732;  /* Make background color darker */
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    }
+
+/* === IMAGE STYLING INSIDE CONTAINER-1 === */
+.container1 img {
+    width: 100%;
+    height: auto;
+    max-height: 70vh; 
+    border-radius: 25px;
+    /* Apply a soft edge mask */
+    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+    mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+        
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    }
+
+/* === CONTAINER FOR USER OPTION 2=== */
+.container2 {
+    background-color: #bcdff5;  /* Make background color lighter */
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    }
+
+/* === IMAGE STYLING INSIDE CONTAINER-2 === */
+.container2 img {
+    width: 100%;
+    height: auto;
+    max-height: 70vh; 
+    border-radius: 25px;
+    /* Apply a soft edge mask */
+    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+    mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+        
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    }
+
+/* === BUTTON STYLING === */
+button {
+    font-family: "Poppins";              /* Applies custom font */
+    color: white;                      /* White text color */
+    padding: 15px 30px;                  /* Vertical and horizontal padding */
+    font-size: 27px;                     /* Large readable font size */
+    cursor: pointer;                     /* Changes cursor to pointer on hover */
+    position: absolute;                  /* Absolutely positioned within parent */
+    bottom: 120px;                       /* Distance from bottom of the container */
+    left: 50%;                           /* Horizontally centers using left */
+    transform: translateX(-50%);         /* Perfect horizontal centering */
+    z-index: 2;                          /* Places above background elements */
+    background: #6689D8;               /* Light blue background */
+    border: none;                        /* Removes default border */
+    border-radius: 8px;                  /* Rounded corners */
+    transition: background 0.3s ease,    /* Smooth background color transition */
+                transform 0.2s ease;     /* Smooth scaling effect */
+}
+
+/* === BUTTON HOVER EFFECT === */
+button:hover {
+    background: #C08CE1;                    /* Changes background to light purple */
+    transform: translateX(-50%) scale(1.1);   /* Adds subtle zoom effect */
+}
+
+/* === GENERIC IMAGE STYLING === */
+img {
+    max-width: 80%;
+    height: auto;
+}
+
+/* === GENERIC VIDEO STYLING === */
+video {
+    width: 80%;
+    max-width: 1200px;    
+    height: auto; 
+}
+
+/* === VIDEO STYLING WITHIN .container === */
+.container video {
+    width: fit-content;
+    max-width: 100%;
+    max-height: 80vh;
+    height: auto;    
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    display: block; 
+    margin: 0 auto;     
+    margin-top: -50px;      
+}
+
+.container audio {
+    width: 80%;  /* Ensures audio player doesn't take full width */
+    margin-top: -30px; /* Space between image and audio player */
+}
+
+.container1 audio {
+    width: 80%;  
+    margin-top: -30px; 
+}
+
+.container2 audio {
+    width: 80%;  
+    margin-top: -30px; 
+}
+
+/* === AUDIO WRAPPER CONTAINER === */
+.audio-wrapper {
+    width: 100%;                        /* Full width of parent */
+    display: flex;                      /* Flex container */
+    align-items: center;                /* Vertically centers items */
+    justify-content: center;            /* Horizontally centers items */
+    gap: 6px;                           /* Space between elements */
+    position: relative;
+    margin-top: 20px;                   /* Adds space above the audio section */
+}
+
+/* === VINYL CONTAINER (SURROUNDING THE VINYL IMAGE) === */
+.vinyl-container {
+    width: 120px; 
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;           /* Hides overflow for a circular look */
+    margin-top: -40px;          /* Pulls vinyl upward */
+}
+
+/* === VINYL IMAGE === */
+#vinyl {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;      /* Makes the image perfectly circular */
+    object-fit: cover;       /* Ensures it fills the container nicely */
+    position: relative;
+}
+
+/* === ROTATION ANIMATION CLASS FOR VINYL === */
+.spin {
+    animation: spin 7s linear infinite;     /* Spins continuously */
+}
+
+/* === KEYFRAMES FOR ROTATION EFFECT === */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* === AUDIO PLAYER STYLING === */
+audio {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px auto;
+    display: block;
+    z-index: 2;
+    position: relative;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 27px;
+}
+
+/* === BUTTON GROUP THAT APPEARS AT THE END === */
+#end-buttons {
+    display: flex;                   /* Flex container for buttons */
+    justify-content: center;         /* Centered horizontally */
+    gap: 20px;                       /* Space between buttons */
+    flex-wrap: nowrap;               /* Prevents buttons from wrapping */
+    align-items: center;
+    position: absolute;               /* Absolute positioning */
+    top: 60%;                         /* 60% from the top of parent */
+    left: 43%;                        /* Positioned slightly left of center */
+    transform: translate(-50%, -50%); /* Perfect centering */
+    width: auto;
+    white-space: nowrap;              /* Keeps buttons on a single line */       
+}
+
+/* === HIDES THE END BUTTONS WHEN NOT NEEDED === */
+#end-buttons.hidden {
+    display: none;
+}
+
+/* === STYLING FOR INDIVIDUAL END BUTTONS === */
+#end-buttons button {
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    background: #6689D8;
+    color: white;
+    border: 5px solid black;    /* Bold black border */
+    border-radius: 5px;           /* Slightly rounded corners */
+    transition: background 0.3s ease;
+    position: relative;
+    
+}
+
+/* === BUTTON HOVER EFFECT === */
+#end-buttons button:hover {
+    background: #C08CE1;        /* Changes to light purple on hover */
+}
+
+/* === TEAM SECTION WRAPPER === */
+.team-section {
+    background-color: #211176;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+    padding: 40px 20px; /* Added vertical padding */
+    text-align: center;
+    flex-wrap: wrap; 
+    min-height: 100vh;
+    box-sizing: border-box; /* Ensures padding is included in height calculation */    
+}
+
+/* === INDIVIDUAL TEAM MEMBER CARD === */
+.team-member {
+    width: 260px; 
+    text-align: center;
+    margin-bottom: 30px; /* Added margin for better spacing when wrapped */
+    flex: 1 1 260px; /* Allows items to grow and shrink with a base of 260px */
+    max-width: 300px; /* Prevents items from getting too wide */
+    min-width: 200px; /* Prevents items from getting too narrow */
+}
+
+/* === TEAM MEMBER IMAGE === */
+.team-member img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 10px;
+    max-width: 100%; /* Ensures image doesn't overflow */
+}
+
+/* === TEAM MEMBER NAME === */
+.team-member h3 {
+    margin: 10px 0 5px;
+    font-size: clamp(18px, 2vw, 20px); /* Responsive font size */
+    font-weight: 600;
+    color: white;
+}
+
+/* === TEAM MEMBER ROLE/DESCRIPTION === */
+.team-member p {
+    font-size: clamp(14px, 1.8vw, 16px); /* Responsive font size */
+    color: #d0b8de;
+    margin-bottom: 10px;
+}
+
+/* === RESPONSIVE STYLES FOR TABLETS (≤768px) === */
+@media (max-width: 768px) {
+    .team-section {
+        gap: 15px;          /* Reduce gap for smaller screens */
+        padding: 30px 15px; /* Slightly less padding */
+    }
+    
+    .team-member {
+        flex-basis: 220px; /* Adjust base size for tablets */
+    }
+}
+
+/* === RESPONSIVE STYLES FOR SMALL SCREENS (≤480px) === */
+@media (max-width: 480px) {
+    .team-section {
+        gap: 10px;
+        padding: 20px 10px;
+    }
+    
+    .team-member {
+        flex-basis: 100%;   /* Take full width */
+        max-width: 100%;
+    }
+}
