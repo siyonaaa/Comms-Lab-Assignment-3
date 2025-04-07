@@ -434,14 +434,31 @@ audio {
 /* === RESPONSIVE STYLES FOR SMALL SCREENS (≤480px) === */
 @media (max-width: 480px) {
     .team-section {
-        gap: 10px;
-        padding: 20px 10px;
+        flex-direction: column;
+        overflow-x: hidden; /* Disable horizontal scrolling */
+        overflow-y: auto; /* Enable vertical scrolling */
+        align-items: center;
+        padding: 30px 20px;
+        height: auto;
     }
+    
     .team-container {
-        padding: 0 max(30px, calc((100% - (220px * 4 + 15px * 3)) / 2));
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+        gap: 30px;
     }
+    
     .team-member {
-        flex-basis: 100%;   /* Take full width */
-        max-width: 100%;
+        width: 100%;
+        max-width: 320px;
+        min-width: auto;
+        flex: none;
+        margin-bottom: 0;
+    }
+    
+    .team-member img {
+        max-width: 260px;
+        margin: 0 auto;
     }
 }
