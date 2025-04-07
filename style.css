@@ -440,6 +440,9 @@ audio {
         align-items: center;
         padding: 30px 20px;
         height: auto;
+        min-height: auto; /* Remove min-height constraint */
+        max-height: none; /* Ensure no maximum height restriction */
+        display: block; /* Change display to allow natural content flow */
     }
     
     .team-container {
@@ -447,6 +450,7 @@ audio {
         width: 100%;
         padding: 0;
         gap: 30px;
+        height: auto;
     }
     
     .team-member {
@@ -455,10 +459,17 @@ audio {
         min-width: auto;
         flex: none;
         margin-bottom: 0;
+        display: block;
     }
     
     .team-member img {
         max-width: 260px;
         margin: 0 auto;
+        display: block;
+    }
+
+    body, html {
+        height: 100%; /* Ensure body and html take full height */
+        overflow-x: hidden; /* Prevent horizontal scrolling on body */
     }
 }
