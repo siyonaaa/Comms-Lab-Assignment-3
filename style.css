@@ -195,6 +195,21 @@ button {
                 transform 0.2s ease;     /* Smooth scaling effect */
 }
 
+/* Add responsive styles for landscape orientation */
+@media (orientation: landscape) and (max-height: 600px) {
+    button {
+        padding: 8px 20px;            /* Smaller padding for landscape */
+        font-size: 18px;              /* Smaller font size for landscape */
+        bottom: 40px;                 /* Position closer to bottom in landscape */
+    }
+    
+    .full-screen-container .overlay-image {
+        width: auto;                  /* Auto width instead of 100% */
+        height: 70%;                  /* Limit height to 70% of container */
+        max-height: 70vh;             /* Additional height constraint */
+    }
+}
+
 /* === BUTTON HOVER EFFECT === */
 button:hover {
     background: #C08CE1;                    /* Changes background to light purple */
