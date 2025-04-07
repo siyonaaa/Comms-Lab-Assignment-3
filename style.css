@@ -83,17 +83,6 @@ nav a.active {
     z-index: 2;       
 }
 
-/* === MEDIA QUERIES FOR RESPONSIVE DESIGN === */
-@media screen and (max-width: 768px) {
-    nav {
-        font-size: 20px;        /* Smaller font on smaller screens */
-    }
-    
-    .full-screen-container .overlay-image {
-        max-width: 95%;         /* Allow overlay to be slightly larger on small screens */
-    }
-}
-
 /* === GENERIC CONTAINER === */
 .container {
     background-color: #211176;  /* Matches background color */
