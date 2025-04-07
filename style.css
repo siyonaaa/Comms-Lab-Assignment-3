@@ -24,8 +24,9 @@ nav {
     display: flex;          /* Uses flex layout */
     align-items: center;    /* Vertically centers nav items */
     justify-content: center;/* Horizontally centers nav items */
-    flex-wrap: wrap;         /* Allow links to wrap on small screens */
+    flex-wrap: nowrap;         /* Allow links to wrap on small screens */
     text-align: center;      /* Optional: center text in each link */
+    overflow-x: auto;
 }
 
 /* === NAVIGATION LINKS === */
@@ -35,6 +36,7 @@ nav a {
     color: #333;          /* Dark gray text color */
     font-size: 25px;        /* Font size for links */
     transition: color 0.3s ease; /* Smooth transition on hover */
+    white-space: nowrap;
 }
 
 nav a:hover {
@@ -479,12 +481,14 @@ audio {
     }
 
     nav {
-        font-size: 20px; /* Slightly smaller text for narrow screens */
-        padding: 15px 10px;
+        font-size: 16px; /* Slightly smaller text for narrow screens */
+        padding: 15px 5px;
+        justify-content: flex-start;
     }
 
     nav a {
-        margin: 5px 10px; /* Less spacing to fit links better */
-        display: inline-block;
+        margin: 0 8px; /* Less spacing to fit links better */
+        font-size: 16px;
+        white-space: nowrap;
     }
 }
