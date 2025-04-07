@@ -5,8 +5,11 @@ body {
     padding: 0;             /* Removes default padding */
     text-align: center;     /* Centers text content */
     position: relative;     /* Positions the body relative for layering */
-    height: 100%;           /* Makes body take full height of the viewport */
-    /*overflow: hidden;*/       /* Hides scrollbars and overflowing content */
+    height: 100%;           /* Makes body take full height of the viewport */    
+}
+
+body.no-vertical-scroll {
+    overflow-y: hidden;
 }
 
 /* === NAVIGATION BAR === */
