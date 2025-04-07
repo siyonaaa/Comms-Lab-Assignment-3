@@ -197,10 +197,18 @@ button {
 
 /* Add responsive styles for landscape orientation */
 @media (orientation: landscape) and (max-height: 600px) {
+
+    .full-screen-container {
+        height: calc(100vh - 40px);    /* Adjust container height in landscape */
+        top: 40px;                     /* Adjust container position */
+    }
+    
     button {
         padding: 8px 20px;            /* Smaller padding for landscape */
         font-size: 18px;              /* Smaller font size for landscape */
         bottom: 60px;                 /* Position closer to bottom in landscape */
+        position: fixed;                /* Change to fixed positioning */
+        bottom: 20%;                    /* Position relative to viewport height */
     }
     
     .full-screen-container .overlay-image {
