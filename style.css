@@ -14,6 +14,7 @@ nav {
     background: #FFFFFA;  /* Light background color */
     padding: 10px 0;        /* Vertical padding */
     position: relative;     /* Positioned relative for z-index control */
+    width: 100%;
     z-index: 10;            /* Stacks nav above other elements */
     font-size: 25px;        /* Sets font size */
     height: 40px;           /* Fixed height */
@@ -72,7 +73,18 @@ nav a.active {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;     
+    z-index: 2;       
+}
+
+/* === MEDIA QUERIES FOR RESPONSIVE DESIGN === */
+@media screen and (max-width: 768px) {
+    nav {
+        font-size: 20px;        /* Smaller font on smaller screens */
+    }
+    
+    .full-screen-container .overlay-image {
+        max-width: 95%;         /* Allow overlay to be slightly larger on small screens */
+    }
 }
 
 /* === GENERIC CONTAINER === */
@@ -333,17 +345,40 @@ audio {
 }
 
 /* === TEAM SECTION WRAPPER === */
-.team-section {
+/*.team-section {
     background-color: #211176;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px; */
+    /*padding: 40px 20px;*/ /* Added vertical padding */
+    /*text-align: center;
+    flex-wrap: wrap; 
+    min-height: 100vh;
+    box-sizing: border-box;*/ /* Ensures padding is included in height calculation */    
+/*}*/
+
+.team-section {
+    background-color: #211176;
+    display: flex;
+    justify-content: center; /* Changed from center to flex-start for scrolling */
+    align-items: center;
     gap: 20px; 
     padding: 40px 20px; /* Added vertical padding */
     text-align: center;
-    flex-wrap: wrap; 
-    min-height: 100vh;
-    box-sizing: border-box; /* Ensures padding is included in height calculation */    
+    flex-wrap: nowrap; /* Prevent wrapping to keep horizontal layout */
+    min-height: calc(100vh - 60px); /* Adjusted for navbar height */
+    box-sizing: border-box; /* Ensures padding is included in height calculation */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Prevent vertical scrolling */
+    width: 100%; /* Ensure full width */
+}
+
+.team-container {
+    display: flex;
+    justify-content: center; /* Centers the team members */
+    gap: 20px;
+    min-width: max-content; /* Ensures container is at least as wide as its content */
 }
 
 /* === INDIVIDUAL TEAM MEMBER CARD === */
@@ -351,7 +386,7 @@ audio {
     width: 260px; 
     text-align: center;
     margin-bottom: 30px; /* Added margin for better spacing when wrapped */
-    flex: 1 1 260px; /* Allows items to grow and shrink with a base of 260px */
+    flex: 0 0 260px; /* Allows items to grow and shrink with a base of 260px */
     max-width: 300px; /* Prevents items from getting too wide */
     min-width: 200px; /* Prevents items from getting too narrow */
 }
@@ -378,6 +413,20 @@ audio {
     font-size: clamp(14px, 1.8vw, 16px); /* Responsive font size */
     color: #d0b8de;
     margin-bottom: 10px;
+}
+
+.team-section::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.team-section::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+.team-section::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
 }
 
 /* === RESPONSIVE STYLES FOR TABLETS (≤768px) === */
