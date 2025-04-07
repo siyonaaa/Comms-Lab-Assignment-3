@@ -200,7 +200,7 @@ button {
     button {
         padding: 8px 20px;            /* Smaller padding for landscape */
         font-size: 18px;              /* Smaller font size for landscape */
-        bottom: 40px;                 /* Position closer to bottom in landscape */
+        bottom: 60px;                 /* Position closer to bottom in landscape */
     }
     
     .full-screen-container .overlay-image {
