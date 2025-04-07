@@ -44,7 +44,8 @@ nav a.active {
     background-color: #211176; /* Dark purple background */
     position: fixed;           /* Stays fixed to the screen */
     width: 100%;               /* Full width */
-    height: 100vh;             /* Full viewport height */
+    height: calc(100vh - 60px); /* Full viewport height */
+    top: 60px;
     display: flex;             /* Flexbox for centering content */
     justify-content: center;   /* Horizontally centers content */
     align-items: center;       /* Vertically centers content */
@@ -56,7 +57,7 @@ nav a.active {
 /* === BACKGROUND IMAGE INSIDE FULL SCREEN CONTAINER === */
 .full-screen-container .bg-img {     
     width: 100%;
-    height: 100vh;
+    height: 100%;
     object-fit: cover;
     position: absolute;
     top: 0;
@@ -175,7 +176,7 @@ button {
     font-size: 27px;                     /* Large readable font size */
     cursor: pointer;                     /* Changes cursor to pointer on hover */
     position: absolute;                  /* Absolutely positioned within parent */
-    bottom: 120px;                       /* Distance from bottom of the container */
+    bottom: 90px;                       /* Distance from bottom of the container */
     left: 50%;                           /* Horizontally centers using left */
     transform: translateX(-50%);         /* Perfect horizontal centering */
     z-index: 2;                          /* Places above background elements */
