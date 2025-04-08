@@ -7,6 +7,30 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    function adjustFullScreenContainer() {
+        // Get the actual height of the nav bar
+        const navBar = document.querySelector('nav');
+        const navHeight = navBar.offsetHeight;
+        
+        // Get the full-screen container
+        const fullScreenContainer = document.querySelector('.full-screen-container');
+        
+        // Set the height and top position based on the actual nav height
+        if (fullScreenContainer) {
+            fullScreenContainer.style.height = `calc(100vh - ${navHeight}px)`;
+            fullScreenContainer.style.top = `${navHeight}px`;
+        }
+    }
+
+    // Run the function immediately
+    adjustFullScreenContainer();
+
+    // Run when the window is resized
+    window.addEventListener('resize', adjustFullScreenContainer);
+
+    // Also run when images and other resources finish loading
+    window.addEventListener('load', adjustFullScreenContainer);
+
     // === Audio & Vinyl Animation Control ===
     const audioPlayer = document.querySelector("audio");
     const vinyl = document.getElementById("vinyl");
