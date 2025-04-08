@@ -52,7 +52,7 @@ nav a.active {
     background-color: #211176; /* Dark purple background */
     position: fixed;           /* Stays fixed to the screen */
     width: 100%;               /* Full width */
-    height: calc(100vh - 60px); /* Full viewport height */
+    height: calc(100% - 60px); /* Full viewport height */
     top: 60px;
     display: flex;             /* Flexbox for centering content */
     justify-content: center;   /* Horizontally centers content */
@@ -69,7 +69,8 @@ nav a.active {
     object-fit: cover;
     position: absolute;
     top: 0;
-    left: 0;        
+    left: 0; 
+    z-index: 1;       
 }
 
 /* === CENTERED OVERLAY IMAGE === */
