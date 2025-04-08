@@ -333,7 +333,7 @@ audio {
     align-items: center;
     position: absolute;               /* Absolute positioning */
     top: 60%;                         /* 60% from the top of parent */
-    left: 43%;                        /* Positioned slightly left of center */
+    left: 45%;                        
     transform: translate(-50%, -50%); /* Perfect centering */
     width: auto;
     white-space: nowrap;              /* Keeps buttons on a single line */       
