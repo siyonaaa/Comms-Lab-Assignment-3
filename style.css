@@ -448,6 +448,9 @@ audio {
     .team-member {
         flex: 0 0 220px;
     }
+    body.no-vertical-scroll {
+        overflow-y: auto;           /* Enable vertical scrolling on smaller screens */
+      }
 }
 
 /* === RESPONSIVE STYLES FOR SMALL SCREENS (≤480px) === */
