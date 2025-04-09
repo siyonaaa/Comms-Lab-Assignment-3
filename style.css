@@ -364,6 +364,35 @@ audio {
     background: #C08CE1;        /* Changes to light purple on hover */
 }
 
+.hidden {
+    display: none;
+}
+
+.center-screen {
+    position: fixed;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;    
+}
+
+/* === STYLING FOR BACK BUTTON === */
+#back-button button {
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    background: #6689D8;
+    color: white;
+    border: 5px solid black;    /* Bold black border */
+    border-radius: 5px;           /* Slightly rounded corners */
+    transition: background 0.3s ease;
+    position: relative;
+}
+
+#back-button button:hover {
+    background: #C08CE1;
+}
+
 /* === TEAM SECTION WRAPPER === */
 .team-section {
     background-color: #211176;

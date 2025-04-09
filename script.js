@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const endButtons = document.getElementById("end-buttons");
     const option1 = document.getElementById("option1");
     const option2 = document.getElementById("option2");
-
+    const backButton = document.getElementById("back-button");
 
     if (audioPlayer && vinyl) {
         // Start spinning vinyl when audio plays
@@ -56,7 +56,8 @@ document.addEventListener("DOMContentLoaded", function() {
         // Stop spinning and show buttons when audio ends
         audioPlayer.addEventListener("ended", function() {
             vinyl.classList.remove("spin");
-            endButtons.classList.remove("hidden");  // Show ending options
+            if (endButtons) endButtons.classList.remove("hidden");  // Show ending options
+            if (backButton) backButton.classList.remove("hidden");  // Show BACK button
         });
     }
     // === End Buttons Redirect ===
@@ -67,4 +68,5 @@ document.addEventListener("DOMContentLoaded", function() {
     option2.addEventListener("click", function() {
         window.location.href = "page2.html"; 
     });
+    
 });
